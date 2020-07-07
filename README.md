@@ -23,7 +23,7 @@ Utilizado um 2020-02-13-raspbian-buster
 
 Como utilizei adaptador USB WiFi, tive que desativar a WiFi On-Board e configurar a externa:
 
-'''
+```
 sudo vi /boot/config.txt
 dtoverlay=pi3-disable-wifi
 
@@ -43,7 +43,7 @@ iface wlan0 inet manual
 
 sudo raspi-config
 Opção 5 - Interfacing Options / P2 SSH - Enable / P5 I2C - Enable / P6 Serial - Disable Shell and Enable Serial
-'''
+```
 
 # Atualize os Raspbian
 
