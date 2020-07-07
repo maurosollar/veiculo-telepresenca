@@ -4,7 +4,7 @@ Este veículo de tele presença tem como objetivo de possibilitar uma pessoa cam
 
 Este veículo tem que ter acesso a uma rede WiFi para chegar até o servidor de vídeo conferência e receber os comandos para se locomover no ambiente.
 
-#Materiais necessários:
+# Materiais necessários:
 
 1 - Display 7" 1024x600 touch
 1 - Raspberry PI 4 B
@@ -27,6 +27,7 @@ sudo vi /boot/config.txt
 dtoverlay=pi3-disable-wifi
 
 sudo vi /etc/modprobe.d/raspi-blacklist.conf
+#wifi
 blacklist brcmfmac
 blacklist brcmutil
 
