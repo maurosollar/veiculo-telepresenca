@@ -17,7 +17,7 @@ Este veículo tem que ter acesso a uma rede WiFi para chegar até o servidor de 
 1 - Conversor DC-DC
 1 - Cartão Micro-SD 8GB Classe 10
 
-Passos para instalação:
+# Passos para instalação:
 
 Utilizado um 2020-02-13-raspbian-buster 
 
@@ -43,7 +43,7 @@ iface wlan0 inet manual
 sudo raspi-config
 Opção 5 - Interfacing Options / P2 SSH - Enable / P5 I2C - Enable / P6 Serial - Disable Shell and Enable Serial
 
-Atualize os Raspbian
+# Atualize os Raspbian
 
 sudo apt-get update
 sudo apt-get upgrade
