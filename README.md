@@ -1,4 +1,4 @@
-# Veículo de Tele-Presenca
+# Veículo de Tele-Presença
 
 Este veículo de tele presença tem como objetivo de possibilitar uma pessoa caminhar e interagir virtualmente com outro ambiente via áudio e vídeo se locomovendo. Usa o próprio navegador nativo da Raspbian para acessar um servidor de vídeo conferência Jitsi.
 
