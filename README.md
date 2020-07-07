@@ -16,6 +16,7 @@ Este veículo tem que ter acesso a uma rede WiFi para chegar até o servidor de 
 - 1 - Carregador de baterias
 - 1 - Conversor DC-DC
 - 1 - Cartão Micro-SD 8GB Classe 10
+- 1 - Teclado sem fio
 
 ## Passos para instalação:
 
