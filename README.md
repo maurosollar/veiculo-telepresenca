@@ -17,7 +17,8 @@ Este veículo necessita de acesso a uma rede WiFi para acessar o servidor de ví
 - 1 - Conversor DC-DC
 - 1 - Cartão Micro-SD 8GB Classe 10
 - 1 - Teclado sem fio
-- 1 - Joystick PS2 ![Screenshot](control.png)
+- 1 - Joystick PS2 
+![Screenshot](control.png)
 
 ## Passos para instalação:
 
