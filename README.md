@@ -23,33 +23,22 @@ Utilizado um 2020-02-13-raspbian-buster
 
 Como utilizei adaptador USB WiFi, tive que desativar a WiFi On-Board e configurar a externa:
 
-vi /boot/config.txt
-
+sudo vi /boot/config.txt
 dtoverlay=pi3-disable-wifi
 
-vi /etc/modprobe.d/raspi-blacklist.conf
+sudo vi /etc/modprobe.d/raspi-blacklist.conf
+ #wifi
+ blacklist brcmfmac
+ blacklist brcmutil
 
-#wifi
-blacklist brcmfmac
-blacklist brcmutil
-
-
-
-vi interfaces
-# interfaces(5) file used by ifup(8) and ifdown(8)
-
-# Please note that this file is written to be used with dhcpcd
-# For static IP, consult /etc/dhcpcd.conf and 'man dhcpcd.conf'
-
-# Include files from /etc/network/interfaces.d:
-source-directory /etc/network/interfaces.d
-
-auto lo
-iface lo inet loopback
-iface eth0 inet manual
-allow-hotplug wlan0
-iface wlan0 inet manual
-        wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+sudo vi interfaces
+ source-directory /etc/network/interfaces.d
+ auto lo
+ iface lo inet loopback
+ iface eth0 inet manual
+ allow-hotplug wlan0
+ iface wlan0 inet manual
+         wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 
 
 Atualize os Raspbian
