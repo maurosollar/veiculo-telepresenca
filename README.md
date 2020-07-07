@@ -1,8 +1,8 @@
 # Veículo de Tele-Presença
 
-Este veículo de tele presença tem como objetivo de possibilitar uma pessoa caminhar e interagir virtualmente com outro ambiente via áudio e vídeo se locomovendo pelo ambiente. O veículo utiliza o próprio navegador nativo da Raspbian para acessar um servidor de vídeo conferência "Jitsi" qual podemos utilizar ele público ou privado caso tenha instalado.
+Este veículo de tele presença tem como objetivo de possibilitar uma pessoa se locomover e interagir virtualmente com outro ambiente via áudio e vídeo. O veículo utiliza o próprio navegador nativo da Raspbian para acessar um servidor de vídeo conferência público ou privado.
 
-Este veículo necessita de acesso a uma rede WiFi para acessar o servidor de vídeo conferência e receber os comandos para se locomover.
+Este veículo necessita de acesso a uma rede WiFi para acessar o servidor de vídeo conferência e receber os comandos para se locomover, funciona a bateria de 12V 7Ah.
 
 ## Materiais necessários:
 
