@@ -40,6 +40,8 @@ allow-hotplug wlan0
 iface wlan0 inet manual
         wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 
+sudo raspi-config
+Opção 5 - Interfacing Options / P2 SSH - Enable / P5 I2C - Enable / P6 Serial - Disable Shell and Enable Serial
 
 Atualize os Raspbian
 
