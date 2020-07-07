@@ -21,6 +21,9 @@ Este veículo necessita de acesso a uma rede WiFi para acessar o servidor de ví
 
 ![Screenshot](control.png)
 
+
+![Screenshot](chassi.png)
+
 ## Passos para instalação:
 
 Utilizado imagem - (2020-02-13-raspbian-buster) e gravar em um Micro-SD
