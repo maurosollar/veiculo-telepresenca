@@ -45,7 +45,7 @@ sudo raspi-config
 Opção 5 - Interfacing Options / P2 SSH - Enable / P5 I2C - Enable / P6 Serial - Disable Shell and Enable Serial
 ```
 
-## Atualize os Raspbian
+## Atualize o Raspbian
 ```
 sudo apt-get update
 sudo apt-get upgrade
