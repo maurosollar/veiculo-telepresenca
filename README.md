@@ -27,18 +27,17 @@ sudo vi /boot/config.txt
 dtoverlay=pi3-disable-wifi
 
 sudo vi /etc/modprobe.d/raspi-blacklist.conf
- #wifi
- blacklist brcmfmac
- blacklist brcmutil
+blacklist brcmfmac
+blacklist brcmutil
 
 sudo vi interfaces
- source-directory /etc/network/interfaces.d
- auto lo
- iface lo inet loopback
- iface eth0 inet manual
- allow-hotplug wlan0
- iface wlan0 inet manual
-         wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+source-directory /etc/network/interfaces.d
+auto lo
+iface lo inet loopback
+iface eth0 inet manual
+allow-hotplug wlan0
+iface wlan0 inet manual
+        wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 
 
 Atualize os Raspbian
