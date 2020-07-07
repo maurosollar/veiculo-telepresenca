@@ -7,14 +7,23 @@ Este veículo tem que ter acesso a uma rede WiFi para chegar até o servidor de 
 Materiais necessários:
 
 1 - Display 7" 1024x600 touch
+
 1 - Raspberry PI 4 B
+
 1 - WebCam Logitech C920
+
 1 - Caixa de som
+
 1 - Conjunto de rodas Mecanum, comprado na China já com arduino e placa de controle que recebe via serial os comandos de movimentos.
+
 1 - Bateria 12V 7Ah chumbo ácido
+
 1 - Adaptador USB TP-Link WiFi com antena de 4dB, não foi utilizado o WiFi da própria Raspberry em função do baixo ganho de recepção.
+
 1 - Carregador de baterias
+
 1 - Conversor DC-DC
+
 1 - Cartão Micro-SD 8GB Classe 10
 
 Passos para instalação:
