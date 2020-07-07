@@ -20,9 +20,9 @@ Este veículo necessita de acesso a uma rede WiFi para acessar o servidor de ví
 
 ## Passos para instalação:
 
-Utilizado um 2020-02-13-raspbian-buster 
+Utilizado uma imagem - 2020-02-13-raspbian-buster, gravar em um Micro-SD
 
-Como utilizei adaptador USB WiFi, tive que desativar a WiFi On-Board e configurar a externa:
+Utizado um Adaptador USB WiFi com antena externa de 4dB, aumentado o ganho com relação a On-bord da Raspberry PI 4 B qual foi desativada e configurarada a externa:
 
 ```
 sudo vi /boot/config.txt
