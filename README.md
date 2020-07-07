@@ -28,7 +28,7 @@ Materiais necessários:
 
 Passos para instalação:
 
-Utilizado um 2020-02-13-raspbian-buster
+Utilizado um 2020-02-13-raspbian-buster 
 
 Como utilizei adaptador USB WiFi, tive que desativar a WiFi On-Board e configurar a externa:
 
