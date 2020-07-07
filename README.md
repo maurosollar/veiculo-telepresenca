@@ -17,12 +17,15 @@ Este veículo necessita de acesso a uma rede WiFi para acessar o servidor de ví
 - 1 - Conversor DC-DC
 - 1 - Cartão Micro-SD 8GB Classe 10
 - 1 - Teclado sem fio
+- 1 - Joystick PS2 
+
+![Screenshot](control.png)
 
 ## Passos para instalação:
 
-Utilizado uma imagem - 2020-02-13-raspbian-buster, gravar em um Micro-SD
+Utilizado imagem - (2020-02-13-raspbian-buster) e gravar em um Micro-SD
 
-Utizado um Adaptador USB WiFi com antena externa de 4dB, aumentado o ganho com relação a On-bord da Raspberry PI 4 B qual foi desativada e configurarada a externa:
+Utizado um Adaptador USB WiFi com antena externa de 4dB, aumentado o ganho com relação a On-bord da Raspberry PI 4 B qual foi desativada e configurarada a externa como a seguir:
 
 ```
 sudo vi /boot/config.txt
