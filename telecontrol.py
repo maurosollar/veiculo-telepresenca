@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 # -*- coding: latin-1 -*-
-# Controle do veículo de Tele Presença
+# Controle do veículo de Tele Presença - 2020
 
 import pygame, socket
 
