@@ -91,7 +91,7 @@ $sudo systemctl enable teleserver.service
 $sudo systemctl start teleserver
 $sudo systemctl status teleserver
 ```
-
+Mais detalhes sobre o systemd.service: https://www.freedesktop.org/software/systemd/man/systemd.service.html
 
 ## Continue...
 
