@@ -66,10 +66,29 @@ Esta aplicação é pra ser executada na máquina que irá controlar o Veículo 
 
 ## teleserver.py
 
-Este já roda diretamente na Raspberry como serviço, veja procedimento abaixo:
+Este já roda diretamente na Raspberry como serviço, veja procedimento abaixo para coloca-lo como serviço:
 
+```
+cd /etc/systemd/system
+$sudo vi teleserver.service
+[Unit]
+Description=Recebe comandos UDP do client telecontrol.py
+After=multi-user.target
 
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /home/pi/teleserver.py
+Restart=on-abort
 
+[Install]
+WantedBy=multi-user.target
+
+$sudo chmod ugo+x teleserver.service
+$sudo systemctl daemon-reload
+$sudo systemctl enable teleserver.service
+$sudo systemctl start teleserver
+$sudo systemctl status teleserver
+```
 
 
 ## Continue...
