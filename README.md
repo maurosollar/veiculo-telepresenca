@@ -10,7 +10,6 @@ Este veículo necessita de acesso a uma rede WiFi para acessar o servidor de ví
 - 1 - Raspberry PI 4 B
 - 1 - WebCam Logitech C920
 - 1 - Caixa de som
-- 1 - Conjunto de rodas Mecanum, comprado na China já com arduino e placa de controle que recebe via serial os comandos de movimentos, veja link: https://github.com/MoebiusTech/MecanumRobot-Arduino-Uno
 - 1 - Bateria 12V 7Ah chumbo ácido
 - 1 - Adaptador USB TP-Link WiFi com antena de 4dB, não foi utilizado o WiFi da própria Raspberry em função do baixo ganho de recepção.
 - 1 - Carregador de baterias
@@ -18,9 +17,8 @@ Este veículo necessita de acesso a uma rede WiFi para acessar o servidor de ví
 - 1 - Cartão Micro-SD 8GB Classe 10
 - 1 - Teclado sem fio
 - 1 - Joystick PS2 
-
-
 <img src="./controle.jpg" width="300" height="300">
+- 1 - Conjunto de rodas Mecanum, comprado na China já com arduino e placa de controle que recebe via serial os comandos de movimentos, veja link: https://github.com/MoebiusTech/MecanumRobot-Arduino-Uno
 <img src="./chassi.png" width="300" height="300">
 
 ## Passos para instalação:
