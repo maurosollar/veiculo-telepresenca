@@ -19,7 +19,7 @@ Este veículo necessita de acesso a uma rede WiFi para acessar o servidor de ví
 - 1 - Teclado sem fio
 - 1 - Joystick PS2 
 
-![Screenshot](controle.jpg)
+![Screenshot](controle.jpg = 100x100)
 
 
 ![Screenshot](chassi.png)
