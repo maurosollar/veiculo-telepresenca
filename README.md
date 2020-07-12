@@ -59,7 +59,14 @@ sudo apt-get upgrade
 
 Esta aplicação é pra ser executada na máquina que irá controlar o Veículo de tele-presença, recebe comandos do mouse clicando diretamente na tela da aplicação ou usando um controle PS2, como da foto acima, e envia para o Veículo via protocolo UDP.
 
+Utiizando o Pyinstaller: 
+```
+pip install pywin32
+pyinstaller telecontrol.py -F
+```
+
 ![Screenshot](telecontrol.png)
+
 
 ## teleserver.py
 
