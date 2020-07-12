@@ -79,6 +79,8 @@ After=multi-user.target
 Type=simple
 ExecStart=/usr/bin/python /home/pi/teleserver.py
 Restart=always
+# Linha abaixo determina 5 segundos para o serviço reiniciar novamente caso ele seja interrompido.
+RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target
