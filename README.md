@@ -78,7 +78,7 @@ After=multi-user.target
 [Service]
 Type=simple
 ExecStart=/usr/bin/python /home/pi/teleserver.py
-Restart=on-abort
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
