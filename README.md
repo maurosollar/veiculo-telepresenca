@@ -64,7 +64,7 @@ Esta aplicação é pra ser executada na máquina que irá controlar o Veículo 
 
 ![Screenshot](telecontrol.png)
 
-## server.py
+## teleserver.py
 
 Este já roda diretamente na Raspberry como serviço, veja procedimento abaixo:
 
