@@ -60,7 +60,7 @@ sudo apt-get upgrade
 
 ## telecontrol.py
 
-Esta aplicação é pra ser executada na máquina que irá controlar o Veículo de tele-presença, ela pode receber comandos do mouse clicando diretamente na tela da aplicação ou usando um controle PS2, como da foto acima, e envia para o Veículo.
+Esta aplicação é pra ser executada na máquina que irá controlar o Veículo de tele-presença, recebe comandos do mouse clicando diretamente na tela da aplicação ou usando um controle PS2, como da foto acima, e envia para o Veículo via protocolo UDP.
 
 ![Screenshot](telecontrol.png)
 
