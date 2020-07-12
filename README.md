@@ -10,7 +10,7 @@ Este veículo necessita de acesso a uma rede WiFi para acessar o servidor de ví
 - 1 - Raspberry PI 4 B
 - 1 - WebCam Logitech C920
 - 1 - Caixa de som
-- 1 - Conjunto de rodas Mecanum, comprado na China já com arduino e placa de controle que recebe via serial os comandos de movimentos.
+- 1 - Conjunto de rodas Mecanum, comprado na China já com arduino e placa de controle que recebe via serial os comandos de movimentos, veja link: https://github.com/MoebiusTech/MecanumRobot-Arduino-Uno
 - 1 - Bateria 12V 7Ah chumbo ácido
 - 1 - Adaptador USB TP-Link WiFi com antena de 4dB, não foi utilizado o WiFi da própria Raspberry em função do baixo ganho de recepção.
 - 1 - Carregador de baterias
@@ -60,7 +60,7 @@ sudo apt-get upgrade
 
 ## telecontrol.py
 
-Esta aplicação é pra ser executada na máquina que irá controlar o Veículo de tele-presença, ela pode receber comandos do mouse clicando diretamente na tela da aplicação ou usando um controle PS2, como da foto acima, e envia para o Veículo.
+Esta aplicação é pra ser executada na máquina que irá controlar o Veículo de tele-presença, recebe comandos do mouse clicando diretamente na tela da aplicação ou usando um controle PS2, como da foto acima, e envia para o Veículo via protocolo UDP.
 
 ![Screenshot](telecontrol.png)
 
