@@ -13,7 +13,7 @@ sock     = socket.socket(socket.AF_INET, # Internet
 
 pygame.init()
 screen = pygame.display.set_mode((300, 150))
-pygame.display.set_caption("Tele Controle")
+pygame.display.set_caption('Tele Controle')
 Icon = pygame.image.load('control.png')
 pygame.display.set_icon(Icon)
 
