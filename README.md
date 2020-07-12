@@ -66,7 +66,7 @@ Esta aplicação é pra ser executada na máquina que irá controlar o Veículo 
 
 ## teleserver.py
 
-Este já roda diretamente na Raspberry como serviço, veja procedimento abaixo para coloca-lo como serviço:
+Este já roda diretamente na Raspberry como serviço, primeiramente coloque o teleserver.py no /home/pi e veja procedimento abaixo para coloca-lo como serviço:
 
 ```
 cd /etc/systemd/system
