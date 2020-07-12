@@ -21,7 +21,7 @@ Este veículo necessita de acesso a uma rede WiFi para acessar o servidor de ví
 
 ![Screenshot](controle.jpg | width = 100)
 
-<img src="./controle.jpg" width="100" height="100">
+<img src="./controle.jpg" width="300" height="300">
 
 
 ![Screenshot](chassi.png)
