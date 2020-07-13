@@ -62,7 +62,7 @@ Esta aplicação é pra ser executada na máquina que irá controlar o Veículo 
 Utiizando o Pyinstaller: 
 ```
 pip install pywin32
-pyinstaller telecontrol.py -F
+pyinstaller --onefile --icon=control.ico telecontrol.py
 ```
 
 ![Screenshot](telecontrol.png)
