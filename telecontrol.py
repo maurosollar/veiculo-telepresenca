@@ -42,7 +42,7 @@ if pygame.joystick.get_count() > 0:
     joystick.init()
 
 pygame.font.init()
-myfont   = pygame.font.SysFont(None, 18)
+myfont   = pygame.font.SysFont('Sans', 14)
 
 def displaytexto(x, y, texto):
         textsurface = myfont.render(texto, False, (0, 0, 0))
