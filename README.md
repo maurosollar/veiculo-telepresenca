@@ -105,6 +105,19 @@ $sudo systemctl status teleserver
 ```
 Mais detalhes sobre o systemd.service: https://www.freedesktop.org/software/systemd/man/systemd.service.html
 
+## Instalado o display de status
+
+```
+git clone https://github.com/adafruit/Adafruit_Python_SSD1306.git
+cd Adafruit_Python_SSD1306
+sudo python setup.py install
+cd ~/Adafruit_Python_SSD1306/examples
+python stats.py
+```
+continuar....Adicionar aqui o processo de colocar o stats.py como serviço ........................... Colocar o stats.py na pasta home e entrar com ele no github também. Documentar ligações 
+
+Continuar Fazer Documentaççao da ligação serial entre rasp e arduino
+
 ## Continue...
 
 
