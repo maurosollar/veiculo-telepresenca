@@ -89,143 +89,143 @@ while not done:
         elif event.type == pygame.JOYBUTTONDOWN:
             if joystick.get_button(3) == 1 and botao_quadrado == 0:
                 botao_quadrado = 1
-                sock.sendto("Quadrado", (UDP_IP, UDP_PORT))
+                sock.sendto("d-Quadrado", (UDP_IP, UDP_PORT))
                 pygame.draw.circle(screen, WHITE, [195, 70], 10, 1)
                 pygame.draw.circle(screen, WHITE, [195, 70], 6, 1)
                 pygame.draw.circle(screen, WHITE, [195, 70], 2, 1)
             if joystick.get_button(1) == 1 and botao_redondo == 0:
                 botao_redondo = 1
-                sock.sendto("Redondo", (UDP_IP, UDP_PORT))                
+                sock.sendto("b-Redondo", (UDP_IP, UDP_PORT))                
                 pygame.draw.circle(screen, WHITE, [255, 70], 10, 1)
                 pygame.draw.circle(screen, WHITE, [255, 70], 6, 1)
                 pygame.draw.circle(screen, WHITE, [255, 70], 2, 1)                
             if joystick.get_button(0) == 1 and botao_triangulo == 0:
                 botao_triangulo = 1
-                sock.sendto("Triangulo", (UDP_IP, UDP_PORT))
+                sock.sendto("L-Triangulo", (UDP_IP, UDP_PORT))
                 pygame.draw.circle(screen, WHITE, [225, 40], 10, 1)
                 pygame.draw.circle(screen, WHITE, [225, 40], 6, 1)
                 pygame.draw.circle(screen, WHITE, [225, 40], 2, 1)                   
             if joystick.get_button(2) == 1 and botao_x == 0:
                 botao_x = 1
-                sock.sendto("X", (UDP_IP, UDP_PORT))
+                sock.sendto("M-X", (UDP_IP, UDP_PORT))
                 pygame.draw.circle(screen, WHITE, [225, 100], 10, 1)
                 pygame.draw.circle(screen, WHITE, [225, 100], 6, 1)
                 pygame.draw.circle(screen, WHITE, [225, 100], 2, 1)                 
             if joystick.get_button(8) == 1 and botao_select == 0:
                 botao_select = 1
-                sock.sendto("Select", (UDP_IP, UDP_PORT))
+                sock.sendto("Z-Select", (UDP_IP, UDP_PORT))
                 pygame.draw.rect(screen, WHITE, [116, 26, 18, 8], 0)                
             if joystick.get_button(9) == 1 and botao_start == 0:
                 botao_start = 1
-                sock.sendto("Start", (UDP_IP, UDP_PORT))
+                sock.sendto("M-Start", (UDP_IP, UDP_PORT))
                 pygame.draw.polygon(screen, WHITE, ((166, 27), (182, 30), (166, 33)))                 
         elif event.type == pygame.JOYBUTTONUP:
             if joystick.get_button(3) == 0 and botao_quadrado == 1:
                 botao_quadrado = 0
-                sock.sendto("Liberado Quadrado", (UDP_IP, UDP_PORT))
+                sock.sendto("Z-Liberado Quadrado", (UDP_IP, UDP_PORT))
             if joystick.get_button(1) == 0 and botao_redondo == 1:
                 botao_redondo = 0
-                sock.sendto("Liberado Redondo", (UDP_IP, UDP_PORT))
+                sock.sendto("Z-Liberado Redondo", (UDP_IP, UDP_PORT))
             if joystick.get_button(0) == 0 and botao_triangulo == 1:
                 botao_triangulo = 0
-                sock.sendto("Liberado Triangulo", (UDP_IP, UDP_PORT))
+                sock.sendto("-Liberado Triangulo", (UDP_IP, UDP_PORT))
             if joystick.get_button(2) == 0 and botao_x == 1:
                 botao_x = 0
-                sock.sendto("Liberado X", (UDP_IP, UDP_PORT))
+                sock.sendto("-Liberado X", (UDP_IP, UDP_PORT))
             if joystick.get_button(8) == 0 and botao_select == 1:
                 botao_select = 0
-                sock.sendto("Liberado Select", (UDP_IP, UDP_PORT))
+                sock.sendto("-Liberado Select", (UDP_IP, UDP_PORT))
             if joystick.get_button(9) == 0 and botao_start == 1:
                 botao_start = 0     
-                sock.sendto("Liberado Start", (UDP_IP, UDP_PORT))
+                sock.sendto("-Liberado Start", (UDP_IP, UDP_PORT))
         elif event.type == pygame.JOYAXISMOTION:
             axis0 = joystick.get_axis(0)
             if axis0 < -0.9:
-                sock.sendto("Left", (UDP_IP, UDP_PORT))
+                sock.sendto("C-Left", (UDP_IP, UDP_PORT))
                 pygame.draw.polygon(screen, WHITE, ((42, 62), (58, 62), (68, 70 ), (58, 78), (42, 78)))
                 axis0ant = 0
             if axis0 > 0.9:
-                sock.sendto("Right", (UDP_IP, UDP_PORT))
+                sock.sendto("G-Right", (UDP_IP, UDP_PORT))
                 pygame.draw.polygon(screen, WHITE, ((92, 62), (108, 62), (108, 78), (92, 78), (82, 70)))
                 axis0ant = 0
             if axis0 < 0.9 and axis0 > -0.9:
                 if axis0ant == 0:
-                    sock.sendto("Left<Centro>Right", (UDP_IP, UDP_PORT))   
+                    sock.sendto("Z-Left<Centro>Right", (UDP_IP, UDP_PORT))   
                 axis0ant = 1   
             axis1 = joystick.get_axis(1)
             if axis1 < -0.9:
-                sock.sendto("Up", (UDP_IP, UDP_PORT))
+                sock.sendto("A-Up", (UDP_IP, UDP_PORT))
                 pygame.draw.polygon(screen, WHITE, ((67, 53), (67, 37), (83, 37), (83, 53), (75, 63))) 
                 axis1ant = 0
             if axis1 > 0.9:
-                sock.sendto("Down", (UDP_IP, UDP_PORT))   
+                sock.sendto("E-Down", (UDP_IP, UDP_PORT))   
                 pygame.draw.polygon(screen, WHITE, ((83, 87), (83, 103), (67, 103), (67, 87), (75, 77)))
                 axis1ant = 0
             if axis1 < 0.9 and axis1 > -0.9:
                 if axis1ant == 0:
-                    sock.sendto("Up<Centro>Down", (UDP_IP, UDP_PORT))         
+                    sock.sendto("Z-Up<Centro>Down", (UDP_IP, UDP_PORT))         
                 axis1ant = 1
         elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1: # Botão esquerdo
             (posx, posy) = pygame.mouse.get_pos() 
             if 60 > posx > 40 and 80 > posy > 60:
-                sock.sendto("Left", (UDP_IP, UDP_PORT))
+                sock.sendto("C-Left", (UDP_IP, UDP_PORT))
                 pygame.draw.polygon(screen, WHITE, ((42, 62), (58, 62), (68, 70), (58, 78), (42, 78)))                
             if 85 > posx > 65 and 55 > posy > 35:
-                sock.sendto("Up", (UDP_IP, UDP_PORT))  
+                sock.sendto("A-Up", (UDP_IP, UDP_PORT))  
                 pygame.draw.polygon(screen, WHITE, ((67, 53), (67, 37), (83, 37), (83, 53), (75, 63))) 
             if 110 > posx > 90 and 80 > posy > 60:
-                sock.sendto("Right", (UDP_IP, UDP_PORT))
+                sock.sendto("G-Right", (UDP_IP, UDP_PORT))
                 pygame.draw.polygon(screen, WHITE, ((92, 62), (108, 62), (108, 78), (92, 78), (82, 70)))                
             if 85 > posx > 65 and 105 > posy > 90:
-                sock.sendto("Down", (UDP_IP, UDP_PORT))
+                sock.sendto("E-Down", (UDP_IP, UDP_PORT))
                 pygame.draw.polygon(screen, WHITE, ((83, 87), (83, 103), (67, 103), (67, 87), (75, 77)))                
             if 205 > posx > 185 and 80 > posy > 60:
-                sock.sendto("Quadrado", (UDP_IP, UDP_PORT))
+                sock.sendto("d-Quadrado", (UDP_IP, UDP_PORT))
                 pygame.draw.circle(screen, WHITE, [195, 70], 10, 1)
                 pygame.draw.circle(screen, WHITE, [195, 70], 6, 1)
                 pygame.draw.circle(screen, WHITE, [195, 70], 2, 1)                
             if 235 > posx > 215 and 50 > posy > 30:
-                sock.sendto("Triangulo", (UDP_IP, UDP_PORT))
+                sock.sendto("L-Triangulo", (UDP_IP, UDP_PORT))
                 pygame.draw.circle(screen, WHITE, [225, 40], 10, 1)
                 pygame.draw.circle(screen, WHITE, [225, 40], 6, 1)
                 pygame.draw.circle(screen, WHITE, [225, 40], 2, 1)                 
             if 265 > posx > 245 and 80 > posy > 60:
-                sock.sendto("Redondo", (UDP_IP, UDP_PORT))
+                sock.sendto("b-Redondo", (UDP_IP, UDP_PORT))
                 pygame.draw.circle(screen, WHITE, [255, 70], 10, 1)
                 pygame.draw.circle(screen, WHITE, [255, 70], 6, 1 )
                 pygame.draw.circle(screen, WHITE, [255, 70], 2, 1)                  
             if 235 > posx > 215 and 110 > posy > 90:
-                sock.sendto("X", (UDP_IP, UDP_PORT))
+                sock.sendto("M-X", (UDP_IP, UDP_PORT))
                 pygame.draw.circle(screen, WHITE, [225, 100], 10, 1)
                 pygame.draw.circle(screen, WHITE, [225, 100], 6, 1)
                 pygame.draw.circle(screen, WHITE, [225, 100], 2, 1)                 
             if 135 > posx > 115 and 35 > posy > 25:
-                sock.sendto("Select", (UDP_IP, UDP_PORT))
+                sock.sendto("Z-Select", (UDP_IP, UDP_PORT))
                 pygame.draw.rect(screen, WHITE, [116, 26, 18, 8], 0)                  
             if 185 > posx > 165 and 35 > posy > 25:
-                sock.sendto("Start", (UDP_IP, UDP_PORT))    
+                sock.sendto("M-Start", (UDP_IP, UDP_PORT))    
                 pygame.draw.polygon(screen, WHITE, ((166, 27), (182, 30), (166, 33)))                 
         elif event.type == pygame.MOUSEBUTTONUP and event.button == 1: # Botão esquerdo
             if 60 > posx > 40 and 80 > posy > 60:
-                sock.sendto("Left<Centro>Right", (UDP_IP, UDP_PORT))
+                sock.sendto("Z-Left<Centro>Right", (UDP_IP, UDP_PORT))
             if 85 > posx > 65 and 55 > posy > 35:
-                sock.sendto("Up<Centro>Down", (UDP_IP, UDP_PORT))
+                sock.sendto("Z-Up<Centro>Down", (UDP_IP, UDP_PORT))
             if 110 > posx > 90 and 80 > posy > 60:
-                sock.sendto("Left<Centro>Right", (UDP_IP, UDP_PORT))
+                sock.sendto("Z-Left<Centro>Right", (UDP_IP, UDP_PORT))
             if 85 > posx > 65 and 105 > posy > 90:
-                sock.sendto("Up<Centro>Down", (UDP_IP, UDP_PORT))
+                sock.sendto("Z-Up<Centro>Down", (UDP_IP, UDP_PORT))
             if 205 > posx > 185 and 80 > posy > 60:
-                sock.sendto("Liberado quadrado", (UDP_IP, UDP_PORT))
+                sock.sendto("Z-Liberado quadrado", (UDP_IP, UDP_PORT))
             if 235 > posx > 215 and 50 > posy > 30:
-                sock.sendto("Liberado triangulo", (UDP_IP, UDP_PORT))
+                sock.sendto("-Liberado triangulo", (UDP_IP, UDP_PORT))
             if 265 > posx > 245 and 80 > posy > 60:
-                sock.sendto("Liberado redondo", (UDP_IP, UDP_PORT))
+                sock.sendto("Z-Liberado redondo", (UDP_IP, UDP_PORT))
             if 235 > posx > 215 and 110 > posy > 90:
-                sock.sendto("Liberado X", (UDP_IP, UDP_PORT))
+                sock.sendto("-Liberado X", (UDP_IP, UDP_PORT))
             if 135 > posx > 115 and 35 > posy > 25:
-                sock.sendto("Liberado Select", (UDP_IP, UDP_PORT))
+                sock.sendto("-Liberado Select", (UDP_IP, UDP_PORT))
             if 185 > posx > 165 and 35 > posy > 25:
-                sock.sendto("Liberado Start", (UDP_IP, UDP_PORT))    
+                sock.sendto("-Liberado Start", (UDP_IP, UDP_PORT))    
       
     # Atualiza tela desenhada
     pygame.display.flip()
