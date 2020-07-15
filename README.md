@@ -47,12 +47,20 @@ iface wlan0 inet manual
 
 sudo raspi-config
 Opção 5 - Interfacing Options / P2 SSH - Enable / P5 I2C - Enable / P6 Serial - Disable Shell and Enable Serial
+
+/// Dando permissão ao usuário "pi" para acessar a serial built-in
+sudo usermod -a -G dialout $(whoami)
+sudo chmod ug+rw /dev/ttyS0
+/// Para testes use a linha abaixo
+minicom -b 9600 -o -D /dev/serial0
 ```
 
 ## Atualize o Raspbian
 ```
 sudo apt-get update
 sudo apt-get upgrade
+/// Linha abaixo para caso ainda não esteja instalado a biblioteca de comunicação serial
+sudo pip install pyserial
 ```
 
 ## telecontrol.py
