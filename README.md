@@ -142,11 +142,14 @@ Obs.: Esta linha fica acima da última linha do arquivo /etc/rc.local que tem o 
 ## Atualizando o DDNS
 
 ```
-
+Utilize o site abaixo e faça o seu cadastro:
 www.no-ip.com
-telepresenca.zapto.org
+Adicione o host abaixo:
+telepresenca.zapto.org   (Obs.: Use outro nome, este é só um exemplo e estou utilizando, rs)
+Instale o cliente que atualiza o IP no no-ip.com com os passos deste link
 https://www.noip.com/support/knowledgebase/install-ip-duc-onto-raspberry-pi/
 
+Resumo dos passos caso não queira utilizar o link acima:
 mkdir /home/pi/noip
 cd /home/pi/noip
 wget https://www.noip.com/client/linux/noip-duc-linux.tar.gz
@@ -155,11 +158,11 @@ cd noip-2.1.9-1  (ou versão atualizada)
 sudo make
 sudo make install
 
-
+Adicionar atualização de 5 em 5 minutos 
 crontab -e
 */5 * * * * sudo noip2 -i `hostname -I | cut -d' ' -f1`
 
-vi rc.local
+Adicionar no /etc/rc.local:
 noip2 -i `hostname -I | cut -d' ' -f1`
 
 ```
