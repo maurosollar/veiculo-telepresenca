@@ -123,11 +123,12 @@ while True:
 
     # Write two lines of text.
 
-    draw.text((x, top),       "IP: " + str(IP),  font=font, fill=255)
-    draw.text((x, top+8),     "CPU: " + str(CPU), font=font, fill=255)
-    draw.text((x, top+16),    str(MemUsage),  font=font, fill=255)
+    draw.text((x, top),       " IP: " + str(IP),  font=font, fill=255)
+    draw.text((x, top+8),     " CPU: " + str(CPU.replace('\n','')) + " %", font=font, fill=255)
+#    draw.text((x, top+16),    str(MemUsage),  font=font, fill=255)
 #    draw.text((x, top+25),    str(Disk),  font=font, fill=255)
-    draw.text((x, top+24),    "Temp: " + str(round(cpu_temp.temperature,1)),  font=font, fill=255)
+    draw.text((x, top+16),    " Temp.: " + str(round(cpu_temp.temperature,1)) + " C",  font=font, fill=255)
+    draw.text((x, top+24),    " Bateria: " + "12,3V",  font=font, fill=255)
 
     # Display image.
     disp.image(image)
