@@ -160,7 +160,7 @@ crontab -e
 */5 * * * * sudo noip2 -i `hostname -I | cut -d' ' -f1`
 
 vi rc.local
-sudo noip2 -i `hostname -I | cut -d' ' -f1`
+noip2 -i `hostname -I | cut -d' ' -f1`
 
 ```
 
