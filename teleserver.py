@@ -1,3 +1,8 @@
+#! /usr/bin/env python
+# -*- coding: latin-1 -*-
+# Controle do veículo de Tele Presença - 2020
+# Autor: Mauro Costa Sollar
+
 import socket
 import serial
 

@@ -1,6 +1,7 @@
 #! /usr/bin/env python
 # -*- coding: latin-1 -*-
-# Controle do veículo de Tele Presença - 2020
+# Controle do veículo de Tele Presença
+# Autor: Mauro Costa Sollar
 
 import pygame, socket
 
