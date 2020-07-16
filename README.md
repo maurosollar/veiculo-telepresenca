@@ -118,7 +118,7 @@ python stats.py
 ## Ligações do Display e da comunicação entre a Raspberry e o Arduino da base Mecanum
 
 ### Pinagem da Raspberry
-<img src="./barramento.png" width="300" height="300">
+<img src="./barramento.png" width="600" height="300">
 
 ### Conectividade RS232
 
