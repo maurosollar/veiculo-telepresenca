@@ -2,6 +2,7 @@
 # -*- coding: latin-1 -*-
 # Controle do veículo de Tele Presença
 # Autor: Mauro Costa Sollar
+# 16/07/2020
 
 import pygame, socket
 
