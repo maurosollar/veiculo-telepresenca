@@ -114,6 +114,27 @@ sudo python setup.py install
 cd ~/Adafruit_Python_SSD1306/examples
 python stats.py
 ```
+
+## Ligações do Display e da comunicação entre a Raspberry e o Arduino da base Mecanum
+
+### Pinagem da Raspberry
+<img src="./pinagem.png" width="300" height="300">
+
+### Conectividade RS232
+
+<img src="./raspberrypi_arduino_serial_gpio.png" width="300" height="300">
+
+### Conversor de nível, utilizado para compatibilizar o nível lógico da Raspberry Pi de 3.3V vs Arduino que utiliza 5V
+
+<img src="./Level_Converter.jpg" width="300" height="300">
+
+<img src="./Module_Level_Converter.jpg" width="300" height="300">
+
+### Display O'Led
+
+<img src="./i2c_oled_128x64_raspberry_pi_wiring.png" width="300" height="300">
+
+
 continuar....Adicionar aqui o processo de colocar o stats.py como serviço ........................... Colocar o stats.py na pasta home e entrar com ele no github também. Documentar ligações 
 
 Continuar Fazer Documentaççao da ligação serial entre rasp e arduino
