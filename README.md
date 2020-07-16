@@ -118,17 +118,17 @@ python stats.py
 ## Ligações do Display e da comunicação entre a Raspberry e o Arduino da base Mecanum
 
 ### Pinagem da Raspberry
-<img src="./pinagem.png" width="300" height="300">
+<img src="./barramento.png" width="300" height="300">
 
 ### Conectividade RS232
 
-<img src="./raspberrypi_arduino_serial_gpio.png" width="300" height="300">
+<img src="./raspberrypi_arduino_serial_gpio.png" width="300" height="150">
 
 ### Conversor de nível, utilizado para compatibilizar o nível lógico da Raspberry Pi de 3.3V vs Arduino que utiliza 5V
 
-<img src="./Level_Converter.jpg" width="300" height="300">
+<img src="./Level_Converter.jpg" width="300" height="150">
 
-<img src="./Module_Level_Converter.jpg" width="300" height="300">
+<img src="./Module_Level_Converter.jpg" width="150" height="150">
 
 ### Display O'Led
 
