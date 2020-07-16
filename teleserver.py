@@ -21,4 +21,5 @@ while True:
     print "received message:",  data
     comando = data[0:1]
     print "Comando: (" + comando + ")"
+    # Envia comando via serial para o kit das rodas Mecanum qual tem um Arduino como controlador
     ser.write(comando)
