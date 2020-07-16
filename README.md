@@ -26,9 +26,9 @@ Se conecta a uma rede WiFi para acessar o servidor de vídeo conferência e rece
 - 1 - Cartão Micro-SD 8GB Classe 10
 - 1 - Teclado sem fio
 - 1 - Joystick PS2 
-<img src="./controle.jpg" width="300" height="300">
+<img src="./Imagens/controle.jpg" width="300" height="300">
 - 1 - Conjunto de rodas Mecanum, comprado na China já com arduino e placa de controle que recebe via serial os comandos de movimentos, veja link: https://github.com/MoebiusTech/MecanumRobot-Arduino-Uno
-<img src="./chassi.png" width="300" height="300">
+<img src="./Imagens/chassi.png" width="300" height="300">
 
 ## Passos para instalação:
 
@@ -79,7 +79,7 @@ pip install pywin32
 pyinstaller --onefile --icon=control.ico telecontrol.py
 ```
 
-![Screenshot](telecontrol.png)
+![Screenshot](./Imagens/telecontrol.png)
 
 
 ## teleserver.py
@@ -124,21 +124,21 @@ sudo python setup.py install
 ## Ligações do Display e da comunicação entre a Raspberry e o Arduino da base Mecanum
 
 ### Pinagem da Raspberry
-<img src="./barramento.png">
+<img src="./Imagens/barramento.png">
 
 ### Conectividade RS232
 
-<img src="./raspberrypi_arduino_serial_gpio.png" width="300" height="150">
+<img src="./Imagens/raspberrypi_arduino_serial_gpio.png" width="300" height="150">
 
 ### Conversor de nível, utilizado para compatibilizar o nível lógico da Raspberry Pi de 3.3V vs Arduino que utiliza 5V
 
-<img src="./Level_Converter.jpg" width="300" height="150">
+<img src="./Imagens/Level_Converter.jpg" width="300" height="150">
 
-<img src="./Module_Level_Converter.jpg" width="150" height="150">
+<img src="./Imagens/Module_Level_Converter.jpg" width="150" height="150">
 
 ### Display O'Led
 
-<img src="./i2c_oled_128x64_raspberry_pi_wiring.png" width="300" height="300">
+<img src="./Imagens/i2c_oled_128x64_raspberry_pi_wiring.png" width="300" height="300">
 
 Adicionar no arquivo /etc/rc.local a linha abaixo, para executar o /home/pi/monitor.py que é responsável para mostrar alguns dados no display.
 ```
