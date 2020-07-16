@@ -11,7 +11,7 @@ Se conecta a uma rede WiFi para acessar o servidor de vídeo conferência e rece
  - Neste ponto o veículo já pegou o IP e automaticamente já atualiza no no-ip.com o IP corrente recebido. Obs.: No caso do IP recebido for privado, é atualizado também o DDNS mas neste caso o veículo só é controlado na rede local ou através de uma VPN.
  - Rodar o telecontrol.py no micro qual ira controlar o veículo e pronto! Agora pode se locomover com o veículode tele-presença e sair conversando com as pessoas que estão no ambiente.
  - Pode usar a tela da aplicação de controle com o mouse ou usar um Joystick PS2 comum.
- - Obs.: No diretório ./Dist deste respositório tem a aplicação já compilada, é só colocar em um diretório em sua máquina Windows juntamente com os arquivos control.ico e config.ini, o arquivo config.ini somente tem uma linha com o parâmetro ip=auto ou ip=xxx.xxx.xxx.xxx, que significa se colocar "auto", a aplicação ira pegar o IP do veículo no site no-ip.com ou caso coloque o IP, será utilizado o especificado.
+ - Obs.: No diretório ./Dist deste respositório tem a aplicação já compilada, é só colocar em um diretório em sua máquina Windows juntamente com os arquivos control.ico e config.ini, o arquivo config.ini somente tem duas linhas com o parâmetro ip=auto ou ip=xxx.xxx.xxx.xxx e host=caso_ip_igual_a_auto_colocar_nome_do_host_que_escolheu_no_no-ip.com, a aplicação ira pegar o IP do veículo no site no-ip.com ou caso coloque o IP, será utilizado o especificado.
  
 
 ## Materiais necessários:
