@@ -78,7 +78,7 @@ Esta aplicação é pra ser executada na máquina que irá controlar o Veículo 
 Utiizando o Pyinstaller: 
 ```
 pip install pywin32
-pyinstaller --onefile --icon=control.ico telecontrol.py
+pyinstaller --noconsole --onefile --icon=control.ico telecontrol.py
 ```
 
 ![Screenshot](./Imagens/telecontrol.png)
@@ -177,3 +177,6 @@ noip2 -i `hostname -I | cut -d' ' -f1`
 
 ```
 
+## Início da montagem, aguardando o restante...
+
+<img src="./Imagens/montagem_1.jpeg" width="700" height="400">
