@@ -4,6 +4,14 @@ Este veículo de tele presença tem como objetivo de possibilitar uma pessoa se 
 
 Se conecta a uma rede WiFi para acessar o servidor de vídeo conferência e receber os comandos para se locomover, funciona com bateria de 12V 7Ah de ácido chumbo.
 
+## Como utilizar
+
+ - Ter um carregador de bateria 12V 7Ah, assim que carregada, colocar no veículo com a chave geral desligada.
+ - Ligue a chave geral na base do veículo e aguarde carregar o sistema, assim que aparecer a interface gráfica no display 7", conectar em uma rede WiFi, abrir o navegador e entrar a URL de algum site de vídeo conferência, que no caso foi utilizado o Jitsi.
+ - Neste ponto o veículo já pegou o IP e automaticamente já atualiza no no-ip.com o IP corrente recebido. Obs.: No caso do IP recebido for privado, é atualizado também o DDNS mas neste caso o veículo só é controlado na rede local ou através de uma VPN.
+ - Rodar o telecontrol.py no micro qual ira controlar o veículo e pronto! Agora pode se locomover com o veículode tele-presença e sair conversando com as pessoas que estão no ambiente.
+ 
+
 ## Materiais necessários:
 
 - 1 - Display 7" 1024x600 touch
