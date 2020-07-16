@@ -4,6 +4,10 @@
 
 Este veículo de tele presença tem como objetivo possibilitar uma pessoa se locomover e interagir virtualmente com algum ambiente via áudio e vídeo. O veículo utiliza uma Raspberry Pi 4 Model B como um cliente de vídeo conferência pelo próprio navegador nativo da Raspbian(Sistema Operacional da Raspberry Pi), bastando digitar uma URL como por exemplo: https://meet.jit.si/ e controlar o veículo por um aplicativo deste repositório.
 
+
+<img src="./Imagens/desenho.png" width="300" height="150">
+
+
 ## Como utilizar
 
  - Ter um carregador de bateria 12V 7Ah ácido chumbo, assim que carregada, colocar no veículo com a chave geral desligada.
