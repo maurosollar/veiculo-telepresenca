@@ -4,8 +4,20 @@
 
 import pygame, socket
 
-UDP_IP   = "192.168.0.243"
-#UDP_IP   = "localhost"
+arquivo = open('config.ini', 'r')
+linha_ip = arquivo.readline()
+linha_ip = linha_ip.replace('\n','')
+linha_host = arquivo.readline()
+linha_host = linha_host.replace('\n','')
+arquivo.close()
+
+if linha_ip.find('ip=') > -1:
+    UDP_IP = linha_ip[linha_ip.find('ip=')+3:]
+    if UDP_IP == "auto":
+        UDP_IP = socket.gethostbyname(linha_host[linha_host.find('host=')+5:])
+
+print "("+UDP_IP+")"
+# UDP_IP   = "192.168.0.243"
 UDP_PORT = 5005
 
 sock     = socket.socket(socket.AF_INET, # Internet
