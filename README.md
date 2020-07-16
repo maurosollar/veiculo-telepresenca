@@ -139,5 +139,28 @@ sleep 10 && python /home/pi/monitor.py &
 ```
 Obs.: Esta linha fica acima da última linha do arquivo /etc/rc.local que tem o comando "exit 0"
 
+## Atualizando o DDNS
 
+```
+
+www.no-ip.com
+telepresenca.zapto.org
+https://www.noip.com/support/knowledgebase/install-ip-duc-onto-raspberry-pi/
+
+mkdir /home/pi/noip
+cd /home/pi/noip
+wget https://www.noip.com/client/linux/noip-duc-linux.tar.gz
+tar vzxf noip-duc-linux.tar.gz
+cd noip-2.1.9-1  (ou versão atualizada)
+sudo make
+sudo make install
+
+
+crontab -e
+*/5 * * * * sudo noip2 -i `hostname -I | cut -d' ' -f1`
+
+vi rc.local
+sudo noip2 -i `hostname -I | cut -d' ' -f1`
+
+```
 
