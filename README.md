@@ -177,3 +177,6 @@ noip2 -i `hostname -I | cut -d' ' -f1`
 
 ```
 
+## Início da montagem, aguardando o restante...
+
+<img src="./Imagens/montagem_1.jpeg" width="150" height="150">
