@@ -2,7 +2,7 @@
 
 Este veículo de tele presença tem como objetivo de possibilitar uma pessoa se locomover e interagir virtualmente com outro ambiente via áudio e vídeo. O veículo utiliza o próprio navegador nativo da Raspbian para acessar um servidor de vídeo conferência público ou privado.
 
-Este veículo necessita de acesso a uma rede WiFi para acessar o servidor de vídeo conferência e receber os comandos para se locomover, funciona a bateria de 12V 7Ah.
+Este veículo necessita de acesso a uma rede WiFi para acessar o servidor de vídeo conferência e receber os comandos para se locomover, funciona com bateria de 12V 7Ah de ácido chumbo.
 
 ## Materiais necessários:
 
@@ -28,6 +28,11 @@ Utilizado imagem - (2020-02-13-raspbian-buster) e gravar em um Micro-SD
 Utizado um Adaptador USB WiFi com antena externa de 4dB, aumentado o ganho com relação a On-bord da Raspberry PI 4 B qual foi desativada e configurarada a externa como a seguir:
 
 ```
+sudo apt-get update
+sudo apt-get upgrade
+/// Instala biblioteca de comunicação RS232
+sudo pip install pyserial
+
 sudo vi /boot/config.txt
 dtoverlay=pi3-disable-wifi
 
@@ -53,14 +58,6 @@ sudo usermod -a -G dialout $(whoami)
 sudo chmod ug+rw /dev/ttyS0
 /// Para testes use a linha abaixo
 minicom -b 9600 -o -D /dev/serial0
-```
-
-## Atualize o Raspbian
-```
-sudo apt-get update
-sudo apt-get upgrade
-/// Linha abaixo para caso ainda não esteja instalado a biblioteca de comunicação serial
-sudo pip install pyserial
 ```
 
 ## telecontrol.py
@@ -134,12 +131,13 @@ python stats.py
 
 <img src="./i2c_oled_128x64_raspberry_pi_wiring.png" width="300" height="300">
 
+Adicionar no arquivo /etc/rc.local a linha abaixo, para executar o /home/pi/monitor.py que é responsável para mostrar alguns dados no display.
+```
+sudo vi /etc/rc.local
+sleep 10 && python /home/pi/monitor.py &
+exit 0
+```
 
-continuar....Adicionar aqui o processo de colocar o stats.py como serviço ........................... Colocar o stats.py na pasta home e entrar com ele no github também. Documentar ligações 
-
-Continuar Fazer Documentaççao da ligação serial entre rasp e arduino
-
-## Continue...
 
 
 
