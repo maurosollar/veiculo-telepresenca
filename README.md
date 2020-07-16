@@ -2,7 +2,7 @@
 
 Este veículo de tele presença tem como objetivo de possibilitar uma pessoa se locomover e interagir virtualmente com outro ambiente via áudio e vídeo. O veículo utiliza o próprio navegador nativo da Raspbian para acessar um servidor de vídeo conferência público ou privado.
 
-Este veículo necessita de acesso a uma rede WiFi para acessar o servidor de vídeo conferência e receber os comandos para se locomover, funciona com bateria de 12V 7Ah de ácido chumbo.
+Se conecta a uma rede WiFi para acessar o servidor de vídeo conferência e receber os comandos para se locomover, funciona com bateria de 12V 7Ah de ácido chumbo.
 
 ## Materiais necessários:
 
@@ -14,6 +14,7 @@ Este veículo necessita de acesso a uma rede WiFi para acessar o servidor de ví
 - 1 - Adaptador USB TP-Link WiFi com antena de 4dB, não foi utilizado o WiFi da própria Raspberry em função do baixo ganho de recepção.
 - 1 - Carregador de baterias
 - 1 - Conversor DC-DC
+- 1 - Display O'Led I2C 128x64 
 - 1 - Cartão Micro-SD 8GB Classe 10
 - 1 - Teclado sem fio
 - 1 - Joystick PS2 
@@ -102,15 +103,15 @@ $sudo systemctl status teleserver
 ```
 Mais detalhes sobre o systemd.service: https://www.freedesktop.org/software/systemd/man/systemd.service.html
 
-## Instalado o display de status
+## Instalado o driver do display O'Led
 
 ```
 git clone https://github.com/adafruit/Adafruit_Python_SSD1306.git
 cd Adafruit_Python_SSD1306
 sudo python setup.py install
-cd ~/Adafruit_Python_SSD1306/examples
-python stats.py
 ```
+
+
 
 ## Ligações do Display e da comunicação entre a Raspberry e o Arduino da base Mecanum
 
@@ -135,9 +136,8 @@ Adicionar no arquivo /etc/rc.local a linha abaixo, para executar o /home/pi/moni
 ```
 sudo vi /etc/rc.local
 sleep 10 && python /home/pi/monitor.py &
-exit 0
 ```
-
+Obs.: Esta linha fica acima da última linha do arquivo /etc/rc.local que tem o comando "exit 0"
 
 
 
