@@ -31,7 +31,7 @@ Este veículo de tele presença tem como objetivo possibilitar uma pessoa se loc
 - 1 - Joystick PS2 
 <img src="./Imagens/controle_portugues.png" width="300" height="300">
 - 1 - Conjunto de rodas Mecanum, comprado na China já com arduino e placa de controle que recebe via serial os comandos de movimentos, veja link: https://github.com/MoebiusTech/MecanumRobot-Arduino-Uno
-<img src="./Imagens/chassi.png" width="300" height="300">
+<img src="./Imagens/chassi.png" width="400" height="300">
 
 ## Passos para instalação:
 
