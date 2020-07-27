@@ -1,6 +1,8 @@
 #include <PS2X_lib.h>  //for MOEBIUS
 #include "FaBoPWM_PCA9685.h"
 
+// Código feito pela MOEBIUS, fiz algumas alterações para compatibilização.
+
 //#include "servo.hpp"
 
 FaBoPWM faboPWM;
