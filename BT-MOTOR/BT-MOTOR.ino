@@ -52,7 +52,7 @@ int MIN_VALUE = 300;
 #define MAX_PWM   2000
 #define MIN_PWM   300
 
-int Motor_PWM = 1900;
+int Motor_PWM = 1000;
  
 //控制电机运动    宏定义
 //    ↑A-----B↑   
@@ -169,11 +169,11 @@ void UART_Control()
   }
   switch(Uart_Date)
   {
-     case 'A':  ADVANCE(500,500,500,500);  M_LOG("Run!\r\n"); break;
+     case 'E':  ADVANCE(500,500,500,500);  M_LOG("Run!\r\n"); break;
      case 'B':  RIGHT_1();  M_LOG("Right up!\r\n");       break;
      case 'C':  rotate_2(); M_LOG("Left rotation!\r\n");  break;      
      case 'D':  RIGHT_3();  M_LOG("Right down!\r\n");     break;
-     case 'E':  BACK();     M_LOG("Run Back!\r\n");       break;
+     case 'A':  BACK();     M_LOG("Run Back!\r\n");       break;
      case 'F':  LEFT_3();   M_LOG("Left down!\r\n");      break;
      case 'G':  rotate_1(); M_LOG("Right rotation!\r\n"); break;         
      case 'H':  LEFT_1();   M_LOG("Left up!\r\n");        break;
@@ -181,8 +181,8 @@ void UART_Control()
      case 'z':  STOP();     M_LOG("Stop!\r\n");           break;
      case 'd':  LEFT_2();   M_LOG("Left!\r\n");           break;
      case 'b':  RIGHT_2();  M_LOG("Right!\r\n");          break;
-     case 'L':  Motor_PWM = 1900; STOP();  M_LOG("1900\r\n");     break;
-     case 'M':  Motor_PWM = 500;  STOP();  M_LOG("500\r\n");      break;
+     case 'L':  Motor_PWM = 1500; STOP();  M_LOG("1500\r\n");     break;
+     case 'M':  Motor_PWM = 1000;  STOP();  M_LOG("1000\r\n");      break;
    }
 }
 

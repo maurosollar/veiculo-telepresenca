@@ -146,7 +146,7 @@ sudo python setup.py install
 Adicionar no arquivo /etc/rc.local a linha abaixo, para executar o /home/pi/monitor.py que é responsável para mostrar alguns dados no display.
 ```
 sudo vi /etc/rc.local
-sleep 10 && python /home/pi/monitor.py &
+sleep 10 && sudo -H -u pi python /home/pi/monitor.py & &
 ```
 Obs.: Esta linha fica acima da última linha do arquivo /etc/rc.local que tem o comando "exit 0"
 
