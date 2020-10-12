@@ -7,6 +7,7 @@
 
 FaBoPWM faboPWM;
 int pos = 0;
+int SERVO_PIN = 9;
 int MAX_VALUE = 2000;   // 电机速度限制
 int MIN_VALUE = 300;
 
@@ -52,7 +53,7 @@ int MIN_VALUE = 300;
 #define MAX_PWM   2000
 #define MIN_PWM   300
 
-int Motor_PWM = 1000;
+int Motor_PWM = 1300;
  
 //控制电机运动    宏定义
 //    ↑A-----B↑   
@@ -169,20 +170,22 @@ void UART_Control()
   }
   switch(Uart_Date)
   {
-     case 'E':  ADVANCE(500,500,500,500);  M_LOG("Run!\r\n"); break;
-     case 'B':  RIGHT_1();  M_LOG("Right up!\r\n");       break;
+     case 'E':  ADVANCE(1500,1500,1500,1500);  M_LOG("Run!\r\n"); break;
+     case 'D':  RIGHT_1();  M_LOG("Right up!\r\n");       break;
      case 'C':  rotate_2(); M_LOG("Left rotation!\r\n");  break;      
-     case 'D':  RIGHT_3();  M_LOG("Right down!\r\n");     break;
+     case 'B':  RIGHT_3();  M_LOG("Right down!\r\n");     break;
      case 'A':  BACK();     M_LOG("Run Back!\r\n");       break;
      case 'F':  LEFT_3();   M_LOG("Left down!\r\n");      break;
      case 'G':  rotate_1(); M_LOG("Right rotation!\r\n"); break;         
      case 'H':  LEFT_1();   M_LOG("Left up!\r\n");        break;
      case 'Z':  STOP();     M_LOG("Stop!\r\n");           break;
      case 'z':  STOP();     M_LOG("Stop!\r\n");           break;
-     case 'd':  LEFT_2();   M_LOG("Left!\r\n");           break;
-     case 'b':  RIGHT_2();  M_LOG("Right!\r\n");          break;
-     case 'L':  Motor_PWM = 1500; STOP();  M_LOG("1500\r\n");     break;
-     case 'M':  Motor_PWM = 1000;  STOP();  M_LOG("1000\r\n");      break;
+     case 'b':  LEFT_2();   M_LOG("Left!\r\n");           break;
+     case 'd':  RIGHT_2();  M_LOG("Right!\r\n");          break;
+     case 'L':  analogWrite(SERVO_PIN, 50);  M_LOG("WEBCAM+\r\n");     break;
+     case 'M':  analogWrite(SERVO_PIN, 150);  M_LOG("WEBCAM-\r\n");      break;
+//     case 'L':  Motor_PWM = 1500; STOP();  M_LOG("1500\r\n");     break;
+//     case 'M':  Motor_PWM = 1000;  STOP();  M_LOG("1000\r\n");      break;     
    }
 }
 
@@ -202,6 +205,7 @@ void setup()
   }
   faboPWM.set_hz(50);
   SERIAL.print("Start");
+  pinMode(SERVO_PIN, OUTPUT);
 }
 
 
