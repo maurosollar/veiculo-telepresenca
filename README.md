@@ -183,3 +183,10 @@ noip2 -i `hostname -I | cut -d' ' -f1`
 ## Início da montagem, aguardando o restante...
 
 <img src="./Imagens/montagem_1.jpeg" width="700" height="400">
+
+## Depois de Pronto
+
+<img src="./Imagens/veiculo1.jpeg" width="700" height="400">
+<img src="./Imagens/veiculo2.jpeg" width="700" height="400">
+
+
