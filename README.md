@@ -186,7 +186,7 @@ noip2 -i `hostname -I | cut -d' ' -f1`
 
 ## Depois de Pronto
 
-<img src="./Imagens/veiculo1.jpeg" width="700" height="400">
-<img src="./Imagens/veiculo2.jpeg" width="700" height="400">
+<img src="./Imagens/veiculo1.jpeg" width="400" height="700">
+<img src="./Imagens/veiculo2.jpeg" width="400" height="700">
 
 
