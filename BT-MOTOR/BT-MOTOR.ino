@@ -6,8 +6,10 @@
 //#include "servo.hpp"
 
 FaBoPWM faboPWM;
-int pos = 0;
-int SERVO_PIN = 9;
+int pos = 290;
+int posi = 0;
+//int SERVO_PIN9 = 9; //490Hz
+//int SERVO_PIN6 = 6; //980Hz
 int MAX_VALUE = 2000;   // 电机速度限制
 int MIN_VALUE = 300;
 
@@ -19,6 +21,7 @@ int MIN_VALUE = 300;
 #define DIRC2 5
 #define DIRD1 6
 #define DIRD2 7
+#define WEBCAM 8
 
 //电机控制，前进、后退、停止
 #define MOTORA_FORWARD(pwm)    do{faboPWM.set_channel_value(DIRA1,pwm);faboPWM.set_channel_value(DIRA2, 0);}while(0)
@@ -160,6 +163,38 @@ void STOP()
   MOTORC_STOP(Motor_PWM);MOTORD_STOP(Motor_PWM);
 }
 
+void WEBCAM_CIMA()
+{
+  if(pos <= 420)
+  {
+    posi = pos - 10;
+    do {
+     posi = posi + 1;
+     faboPWM.set_channel_value(WEBCAM, posi); 
+     delay(15);   
+    } while(pos!=posi);
+  } else {
+    pos = pos - 10;
+  }
+}
+
+
+void WEBCAM_BAIXO()
+{
+  if(pos >= 290)
+  {
+    posi = pos + 10;
+    do {
+     posi = posi - 1;
+     faboPWM.set_channel_value(WEBCAM, posi); 
+     delay(15);   
+    } while(pos!=posi);
+  } else {
+    pos = pos + 10;
+  }
+}
+
+
 //串口输入控制
 void UART_Control()
 {
@@ -182,8 +217,10 @@ void UART_Control()
      case 'z':  STOP();     M_LOG("Stop!\r\n");           break;
      case 'b':  LEFT_2();   M_LOG("Left!\r\n");           break;
      case 'd':  RIGHT_2();  M_LOG("Right!\r\n");          break;
-     case 'L':  analogWrite(SERVO_PIN, 50);  M_LOG("WEBCAM+\r\n");     break;
-     case 'M':  analogWrite(SERVO_PIN, 150);  M_LOG("WEBCAM-\r\n");      break;
+     case 'L':  pos = pos + 10; WEBCAM_CIMA(); Serial.println(pos); M_LOG("WEBCAM CIMA\r\n");     break;
+     case 'M':  pos = pos - 10; WEBCAM_BAIXO(); Serial.println(pos); M_LOG("WEBCAM BAIXO\r\n");      break;     
+//     case 'L':  analogWrite(SERVO_PIN9, 50);  M_LOG("WEBCAM+\r\n");     break;
+//     case 'M':  analogWrite(SERVO_PIN9, 150);  M_LOG("WEBCAM-\r\n");      break;
 //     case 'L':  Motor_PWM = 1500; STOP();  M_LOG("1500\r\n");     break;
 //     case 'M':  Motor_PWM = 1000;  STOP();  M_LOG("1000\r\n");      break;     
    }
@@ -205,7 +242,9 @@ void setup()
   }
   faboPWM.set_hz(50);
   SERIAL.print("Start");
-  pinMode(SERVO_PIN, OUTPUT);
+//  pinMode(SERVO_PIN9, OUTPUT);
+//  pinMode(SERVO_PIN6, OUTPUT);
+  faboPWM.set_channel_value(WEBCAM, pos);
 }
 
 
