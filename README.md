@@ -1,7 +1,6 @@
 # Veículo de Tele-Presença
 
-Este veículo de tele presença tem como objetivo possibilitar uma pessoa se locomover e interagir virtualmente com algum ambiente via áudio e vídeo. O veículo utiliza uma Raspberry Pi 4 Model B como um cliente de vídeo conferência pelo próprio navegador nativo da Raspbian(Sistema Operacional da Raspberry Pi), bastando digitar uma URL como por exemplo: https://meet.jit.si/ e controlar o veículo por um aplicativo deste repositório.
-
+Este veículo de telepresença tem como objetivo possibilitar que uma pessoa se locomova e interaja virtualmente com um ambiente, via áudio e vídeo. O veículo utiliza uma Raspberry Pi 4 Model B como cliente de videoconferência, acessando pelo próprio navegador nativo do Raspbian (sistema operacional da Raspberry Pi), bastando digitar uma URL, como por exemplo: https://meet.jit.si/, e controlar o veículo por meio de um aplicativo deste repositório.
 
 <img src="./Imagens/desenho.png" width="573" height="661">
 
